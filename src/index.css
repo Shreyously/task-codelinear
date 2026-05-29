@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: #000D12;
+  color: #e2e8f0;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #000D12; }
+::-webkit-scrollbar-thumb { background: #1a2236; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #2a3446; }
+
+/* Marquee animation */
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-scroll-left {
+  animation: scroll-left 25s linear infinite;
+}
+
+/* Wave hand — uses translate/rotate (not transform) so it works inside the scrolling marquee */
+@keyframes wave-hand {
+  0%, 100% {
+    translate: -6px 0;
+    rotate: -18deg;
+  }
+  50% {
+    translate: 6px 0;
+    rotate: 22deg;
+  }
+}
+.wave-hand-emoji {
+  display: inline-block;
+  transform-origin: 70% 75%;
+  animation: wave-hand 0.9s ease-in-out infinite;
+}
+
+/* Decorative circles */
+.deco-circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(100, 160, 255, 0.08);
+  pointer-events: none;
+}
+
+/* Glass card effect */
+.glass-card {
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #00d4ff 0%, #2563eb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Custom font overrides */
+.font-archivo {
+  font-family: 'Archivo', sans-serif !important;
+}
+.font-chivo {
+  font-family: 'Chivo Mono', monospace !important;
+}

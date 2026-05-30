@@ -1,4 +1,5 @@
 import Button from './Button';
+import { PaperlessCTAWatermarkIcon } from './icons/PaperlessCTAWatermarkIcon';
 
 type PaperlessCTAProps = {
   background?: 'dark' | 'light';
@@ -11,10 +12,8 @@ export default function PaperlessCTA({ background = 'dark', text = 'CB7', noBack
   const isN7 = text === 'N7';
   const watermarkClass = isN7
     ? 'absolute top-[-16%] right-[-48%] z-0 h-[124%] w-[1120px] max-w-none pointer-events-none select-none md:right-[-38%] lg:right-[-33%]'
-    : 'absolute inset-y-0 left-[18%] z-0 h-full w-[1150px] max-w-none pointer-events-none select-none md:left-[19%]';
-  const watermarkLayerClass = isN7
-    ? 'absolute inset-0 z-0 pointer-events-none [mask-image:linear-gradient(to_bottom,#000_0%,#000_55%,rgba(0,0,0,0.35)_78%,transparent_100%)]'
-    : 'absolute inset-0 z-0 pointer-events-none';
+    : 'absolute top-[-32%] left-[28%] z-0 h-[142%] w-[1150px] max-w-none pointer-events-none select-none md:left-[29%]';
+  const watermarkLayerClass = 'absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-[27px]';
 
   return (
     <section className={`relative ${sectionBackground} py-20 overflow-hidden`}>
@@ -28,40 +27,13 @@ export default function PaperlessCTA({ background = 'dark', text = 'CB7', noBack
         <div className={`relative isolate min-h-[427px] ${noBackground ? 'py-16' : 'overflow-hidden rounded-[27px] bg-[linear-gradient(99.21deg,#031E2A_-12.22%,#000D12_59.26%)] px-8 py-16 md:px-[65px]'} lg:flex lg:items-center lg:justify-between lg:gap-14`}>
           {!noBackground && (
             <div className={watermarkLayerClass}>
-              <svg
+              {/* Soft, highly-blurred backdrop glow blob */}
+              <div className="absolute -left-[5%] top-[15%] w-[480px] h-[320px] rounded-full bg-[#00B4FD]/12 blur-[120px] pointer-events-none z-0" />
+              <PaperlessCTAWatermarkIcon
+                text={text}
                 className={watermarkClass}
-                viewBox="0 0 1150 427"
-                preserveAspectRatio="xMinYMid meet"
-                aria-hidden
-              >
-                <defs>
-                  <linearGradient
-                    id="paperless-cta-watermark-gradient"
-                    gradientUnits="userSpaceOnUse"
-                    x1="0"
-                    y1="20"
-                    x2="980"
-                    y2="390"
-                  >
-                    <stop offset="0%" stopColor="#00B4FD" />
-                    <stop offset="100%" stopColor="#003ACE" />
-                  </linearGradient>
-                </defs>
-                <text
-                  x={isN7 ? '0' : '0'}
-                  y={isN7 ? '390' : '360'}
-                  fill="none"
-                  stroke={isN7 ? 'url(#paperless-cta-watermark-gradient)' : '#0061B8'}
-                  strokeWidth={isN7 ? '1.59' : '1.2'}
-                  fontSize={isN7 ? '560' : '470'}
-                  fontFamily="Archivo, sans-serif"
-                  fontWeight="600"
-                  letterSpacing={isN7 ? '12' : '20'}
-                  opacity={isN7 ? '0.48' : '0.42'}
-                >
-                  {text}
-                </text>
-              </svg>
+              />
+              <div className="absolute inset-x-0 bottom-0 h-[65%] bg-gradient-to-t from-[#000D12] via-[#000D12]/75 to-transparent pointer-events-none z-10" />
             </div>
           )}
 

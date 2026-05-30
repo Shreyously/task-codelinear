@@ -1,4 +1,5 @@
 import Button from './Button';
+import ChevronDown from './icons/ChevronDown';
 
 export default function Navbar() {
   return (
@@ -24,18 +25,10 @@ export default function Navbar() {
             <span className="font-chivo text-[12px] leading-[15.6px] font-normal uppercase text-[#E9F4F9] tracking-[0] group-hover:text-white/80 transition-colors whitespace-nowrap">
               solutions
             </span>
-            <svg
-              className="w-3 h-3 text-[#E9F4F9] group-hover:translate-y-0.5 transition-transform duration-200 flex-shrink-0"
-              style={{ transform: 'rotate(-90deg)' }}
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.144"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <polyline points="9 18 15 12 9 6" />
-            </svg>
+            <ChevronDown
+              className="w-[22px] h-[22px] text-[#E9F4F9] group-hover:translate-y-0.5 transition-transform duration-200 flex-shrink-0"
+              style={{ transform: 'rotate(90deg)' }}
+            />
           </div>
 
           {/* Item 2 - Resources */}
@@ -43,18 +36,10 @@ export default function Navbar() {
             <span className="font-chivo text-[12px] leading-[15.6px] font-normal uppercase text-[#E9F4F9] tracking-[0] group-hover:text-white/80 transition-colors whitespace-nowrap">
               resources
             </span>
-            <svg
-              className="w-3 h-3 text-[#E9F4F9] group-hover:translate-y-0.5 transition-transform duration-200 flex-shrink-0"
-              style={{ transform: 'rotate(-90deg)' }}
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.144"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <polyline points="9 18 15 12 9 6" />
-            </svg>
+            <ChevronDown
+              className="w-[22px] h-[22px] text-[#E9F4F9] group-hover:translate-y-0.5 transition-transform duration-200 flex-shrink-0"
+              style={{ transform: 'rotate(90deg)' }}
+            />
           </div>
 
           {/* Item 3 - About us */}

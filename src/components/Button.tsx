@@ -5,6 +5,7 @@ export interface ButtonProps {
   size?: 'sm' | 'md' | 'lg' | 'badge' | 'arrow' | 'readMore' | 'readMoreLg';
   variant?: 'primary' | 'secondary' | 'badge' | 'ghost' | 'arrow' | 'readMore';
   bgColor?: string; // background color prop as requested
+  hoverBgColor?: string; // custom hover background color (e.g., 'hover:bg-[#D5E5EE]')
   textSize?: string; // text size override prop as requested
   width?: string; // width override prop as requested (e.g., 'w-[210px]')
   className?: string;
@@ -18,6 +19,7 @@ export default function Button({
   size = 'lg', // default size
   variant = 'primary',
   bgColor,
+  hoverBgColor,
   textSize,
   width,
   className = '',
@@ -45,16 +47,20 @@ export default function Button({
   if (variant === 'primary') {
     // If a custom background color is passed, use it, otherwise use the gradient
     const bg = bgColor ? bgColor : 'bg-gradient-to-r from-[#00B4FD] to-[#003ACF]';
-    themeClasses = `${bg} text-[#E9F4F9] hover:bg-none hover:bg-[#E9F4F9] hover:text-[#003ACF]`;
+    const hoverBg = hoverBgColor ? hoverBgColor : 'hover:bg-[#E9F4F9]';
+    themeClasses = `${bg} text-[#E9F4F9] hover:bg-none ${hoverBg} hover:text-[#003ACF]`;
   } else if (variant === 'secondary') {
     const bg = bgColor ? bgColor : 'bg-transparent';
-    themeClasses = `border border-[#E9F4F9] ${bg} text-[#E9F4F9] hover:bg-[#E9F4F9] hover:text-[#003ACF]`;
+    const hoverBg = hoverBgColor ? hoverBgColor : 'hover:bg-[#E9F4F9]';
+    themeClasses = `border border-[#E9F4F9] ${bg} text-[#E9F4F9] ${hoverBg} hover:text-[#003ACF]`;
   } else if (variant === 'badge') {
     const bg = bgColor ? bgColor : 'bg-transparent';
-    themeClasses = `border border-n7-light/30 ${bg} text-white hover:bg-[#E9F4F9] hover:text-[#003ACF] hover:border-[#E9F4F9]`;
+    const hoverBg = hoverBgColor ? hoverBgColor : 'hover:bg-[#E9F4F9]';
+    themeClasses = `border border-n7-light/30 ${bg} text-white ${hoverBg} hover:text-[#003ACF] hover:border-[#E9F4F9]`;
   } else if (variant === 'ghost') {
     const bg = bgColor ? bgColor : 'bg-transparent';
-    themeClasses = `border border-n7-border ${bg} text-white hover:bg-[#E9F4F9] hover:text-[#003ACF] hover:border-[#E9F4F9]`;
+    const hoverBg = hoverBgColor ? hoverBgColor : 'hover:bg-[#E9F4F9]';
+    themeClasses = `border border-n7-border ${bg} text-white ${hoverBg} hover:text-[#003ACF] hover:border-[#E9F4F9]`;
   } else if (variant === 'arrow') {
     const bg = bgColor ? bgColor : 'bg-transparent';
     themeClasses = `border border-n7-cyan/40 ${bg} text-n7-cyan hover:bg-n7-cyan/10`;

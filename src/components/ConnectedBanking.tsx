@@ -1,3 +1,5 @@
+import LaptopMockup from './LaptopMockup';
+
 const features = {
   left: [
     'Customer-On Boarding',
@@ -36,16 +38,11 @@ export default function ConnectedBanking() {
       <div className="max-w-[1400px] mx-auto px-8">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
           {/* Left — KYC Dashboard */}
-          <div className="relative lg:justify-self-start lg:ml-[calc(min(0px,(100vw-1400px)/-2)-2rem)]">
-            <div className="w-[650px] max-w-full h-[460px] rounded-xl overflow-hidden shadow-2xl border border-n7-border/50 transform -rotate-1 hover:rotate-0 transition-transform duration-500">
-              <img
-                src="/assets/kyc-dashboard.png"
-                alt="KYC Dashboard"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="absolute -bottom-4 left-8 right-8 max-w-[650px] h-px bg-gradient-to-r from-transparent via-n7-cyan/20 to-n7-cyan/40" />
-          </div>
+          <LaptopMockup
+            src="/assets/kyc-dashboard.png"
+            alt="KYC Dashboard"
+            className="lg:justify-self-start lg:ml-[calc(min(0px,(100vw-1400px)/-2)-6rem)]"
+          />
 
           {/* Right — Feature list */}
           <div className="lg:pl-10 xl:pl-16">

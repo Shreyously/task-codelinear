@@ -1,5 +1,9 @@
 import { useState } from 'react';
 import Button from './Button';
+import ChevronLeft from './icons/ChevronLeft';
+import ChevronRight from './icons/ChevronRight';
+import ArrowRight from './icons/ArrowRight';
+import ZoomerrIcon from './icons/ZoomerrIcon';
 
 const insights = [
   {
@@ -26,17 +30,14 @@ const caseStudies = [
   {
     tag: 'GETTING STARTED',
     title: 'How we help brand reach out to more people',
-    brand: 'Zoomerr',
   },
   {
     tag: 'GETTING STARTED',
     title: 'How we help brand reach out to more people',
-    brand: 'Zoomerr',
   },
   {
     tag: 'GETTING STARTED',
     title: 'How we help brand reach out to more people',
-    brand: 'Zoomerr',
   },
 ];
 
@@ -113,14 +114,7 @@ export default function Insights() {
               >
                 <span>Read All Insights</span>
                 <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-n7-cyan transition-all duration-300 group-hover:w-full" />
-                <svg
-                  className="w-4 h-4 transform transition-transform duration-300 group-hover:translate-x-1"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
+                <ArrowRight className="w-4 h-4 transform transition-transform duration-300 group-hover:translate-x-1" />
               </a>
             </div>
           </div>
@@ -160,8 +154,7 @@ export default function Insights() {
               <span className="font-chivo font-medium text-[12px] text-[#2490BB] leading-[130%] tracking-[0] uppercase mb-3 block">{caseStudies[currentSlide].tag}</span>
               <h3 className="font-archivo font-normal text-[43px] text-white leading-[120%] tracking-[0] w-[423px] h-[156px] mb-4">{caseStudies[currentSlide].title}</h3>
               <div className="flex items-center gap-2 mb-6">
-                <div className="w-5 h-5 rounded bg-green-500/30" />
-                <span className="font-roboto font-bold text-[22.51px] text-n7-muted leading-[110%] tracking-[0] w-[88px] h-[25px] flex items-center">{caseStudies[currentSlide].brand}</span>
+                <ZoomerrIcon className="h-[25px] w-auto text-n7-muted" />
               </div>
               <Button href="#" variant="readMore" size="readMoreLg" tabIndex={-1}>
                 Read More
@@ -192,8 +185,7 @@ export default function Insights() {
               <span className="font-chivo font-medium text-[12px] text-[#2490BB] leading-[130%] tracking-[0] uppercase mb-3 block">{caseStudies[currentSlide].tag}</span>
               <h3 className="font-archivo font-normal text-[43px] text-white leading-[120%] tracking-[0] w-[423px] h-[156px] mb-4">{caseStudies[currentSlide].title}</h3>
               <div className="flex items-center gap-2 mb-6">
-                <div className="w-5 h-5 rounded bg-green-500/30" />
-                <span className="font-roboto font-bold text-[22.51px] text-n7-muted leading-[110%] tracking-[0] w-[88px] h-[25px] flex items-center">{caseStudies[currentSlide].brand}</span>
+                <ZoomerrIcon className="h-[25px] w-auto text-n7-muted" />
               </div>
               <Button href="#" variant="readMore" size="readMoreLg">
                 Read More
@@ -209,7 +201,7 @@ export default function Insights() {
               size="arrow"
               aria-label="Previous"
             >
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
+              <ChevronLeft className="w-5 h-5" />
             </Button>
             <div className="flex gap-2">
               {caseStudies.map((_, i) => (
@@ -227,7 +219,7 @@ export default function Insights() {
               size="arrow"
               aria-label="Next"
             >
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+              <ChevronRight className="w-5 h-5" />
             </Button>
           </div>
 
@@ -238,14 +230,7 @@ export default function Insights() {
             >
               <span>View All</span>
               <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-n7-cyan transition-all duration-300 group-hover:w-full" />
-              <svg
-                className="w-4 h-4 transform transition-transform duration-300 group-hover:translate-x-1"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
+              <ArrowRight className="w-4 h-4 transform transition-transform duration-300 group-hover:translate-x-1" />
             </a>
           </div>
         </div>

@@ -43,22 +43,22 @@ const solutions = [
 
 export default function Solutions() {
   return (
-    <section id="solutions" className="relative py-24 bg-n7-dark">
-      <div className="max-w-[1400px] mx-auto px-8">
-        <div className="grid lg:grid-cols-[1fr_3.5fr] gap-40">
+    <section id="solutions" className="relative py-16 sm:py-20 lg:py-24 bg-n7-dark">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-[1fr_3.5fr] gap-12 lg:gap-20 xl:gap-32">
           {/* Left heading */}
           <div>
             <h2 className="font-archivo text-3xl md:text-[37px] font-light text-white leading-tight mb-8">
-              <span className="md:block md:whitespace-nowrap">All of our solutions are</span>
-              <span className="md:block md:whitespace-nowrap">tailor-made to your needs</span>
+              <span className="md:block lg:whitespace-nowrap">All of our solutions are</span>
+              <span className="md:block lg:whitespace-nowrap">tailor-made to your needs</span>
             </h2>
-            <Button href="#contact" variant="secondary" size="lg" textSize="text-[15px]" width="w-[226px]">
+            <Button href="#contact" variant="secondary" size="lg" textSize="text-[15px]" width="w-full sm:w-[226px]">
               request demo
             </Button>
           </div>
 
           {/* Right grid */}
-          <div className="grid md:grid-cols-2 gap-x-12 gap-y-16 lg:pl-36">
+          <div className="grid md:grid-cols-2 gap-x-10 lg:gap-x-12 gap-y-12 lg:gap-y-16 lg:pl-12 xl:pl-24">
             {solutions.map((s, i) => (
               <div key={i} className="group">
                 <div className="mb-4 flex items-center justify-between">

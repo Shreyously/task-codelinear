@@ -27,7 +27,7 @@ export default function Footer() {
       className="relative overflow-hidden"
       style={{ background: '#000D12' }}
     >
-      <div className="relative z-10 max-w-[1450px] mx-auto px-12 pt-20 pb-10">
+      <div className="relative z-10 max-w-[1450px] mx-auto px-4 sm:px-6 lg:px-12 pt-14 sm:pt-16 lg:pt-20 pb-8 lg:pb-10">
         {/* Main content with N7 on left spanning both rows */}
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-0">
           {/* N7 Large Logo — spans both address and links rows */}
@@ -35,7 +35,7 @@ export default function Footer() {
             <div
               className="font-archivo font-medium leading-none select-none relative"
               style={{
-                fontSize: '380px',
+                fontSize: 'clamp(112px, 37vw, 380px)',
                 lineHeight: '0.68',
                 background: 'linear-gradient(135deg, hsl(197, 99%, 70%) 0%, hsl(197, 99%, 63%) 55%, hsla(241, 100%, 50%, 1.00) 100%)',
                 WebkitBackgroundClip: 'text',
@@ -51,9 +51,9 @@ export default function Footer() {
           {/* Right side: addresses on top, links below */}
           <div className="flex-1 lg:pl-8">
             {/* Location columns */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 mb-24">
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 lg:gap-10 mb-14 lg:mb-24">
               {/* London */}
-              <div className="max-w-[220px]">
+              <div className="max-w-[260px]">
                 <h4
                   className="font-archivo font-medium text-base mb-4"
                   style={{ color: '#E9F4F9' }}
@@ -71,7 +71,7 @@ export default function Footer() {
               </div>
 
               {/* Dubai */}
-              <div className="max-w-[220px]">
+              <div className="max-w-[260px]">
                 <h4
                   className="font-archivo font-medium text-base mb-4"
                   style={{ color: '#E9F4F9' }}
@@ -89,7 +89,7 @@ export default function Footer() {
               </div>
 
               {/* India (labeled London in Figma) */}
-              <div className="max-w-[220px]">
+              <div className="max-w-[260px]">
                 <h4
                   className="font-archivo font-medium text-base mb-4"
                   style={{ color: '#E9F4F9' }}
@@ -108,7 +108,7 @@ export default function Footer() {
             </div>
 
             {/* Link columns */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-10 mb-16">
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-10 lg:gap-10 mb-12 lg:mb-16">
               {/* Solutions */}
               <div>
                 <h4

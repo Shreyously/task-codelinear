@@ -8,13 +8,11 @@ interface LaptopMockupProps {
 
 export default function LaptopMockup({ src, alt = 'Laptop Mockup', className = '' }: LaptopMockupProps) {
   return (
-    <div className={`relative ${className}`}>
+    <div className={`relative mx-auto w-full max-w-[651.67px] pb-[4.6%] sm:min-w-[0] ${className}`}>
       {/* Laptop Screen Frame */}
       <div
-        className="relative overflow-hidden shadow-2xl pt-[14px] px-[14px] pb-[20px]"
+        className="relative aspect-[651.67/432] w-full overflow-hidden shadow-2xl p-[2.15%] pb-[3.05%]"
         style={{
-          width: '651.67px',
-          height: '432px',
           background: 'linear-gradient(#0D0F12, #0D0F12) padding-box, linear-gradient(106.53deg, #00B4FD -5.68%, #003ACE 86.98%) border-box',
           border: '1.05px solid transparent',
           borderTopLeftRadius: '15.77px',
@@ -32,13 +30,8 @@ export default function LaptopMockup({ src, alt = 'Laptop Mockup', className = '
 
       {/* Laptop Base (Keyboard stand) */}
       <div
-        className="absolute pointer-events-none"
+        className="absolute bottom-0 left-1/2 h-[7%] w-full -translate-x-1/2 pointer-events-none sm:w-[117.54%]"
         style={{
-          width: '765.94px',
-          height: '30.3px',
-          left: '50%',
-          transform: 'translateX(-50%)',
-          top: '420px',
           background: 'linear-gradient(#16191E, #16191E) padding-box, linear-gradient(106.53deg, #00B4FD -5.68%, #003ACE 86.98%) border-box',
           border: '1.05px solid transparent',
           borderTopLeftRadius: '5.26px',

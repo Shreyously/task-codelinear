@@ -28,7 +28,7 @@ export default function Button({
   ...props
 }: ButtonProps) {
   // Base classes for transition and alignment with Chivo Mono, 400 weight, uppercase, tracking 0%
-  const baseClasses = 'inline-flex items-center justify-center transition-all duration-300 ease-out active:scale-[0.98] select-none text-center font-chivo font-normal uppercase tracking-[0]';
+  const baseClasses = 'inline-flex max-w-full items-center justify-center transition-all duration-300 ease-out active:scale-[0.98] select-none text-center font-chivo font-normal uppercase tracking-[0]';
 
   // Size classes matching the project styling with 15px (text-[15px]) and 130% (leading-[1.3]) defaults
   const sizeClasses = {
@@ -37,8 +37,8 @@ export default function Button({
     lg: `${width ? width : 'px-[51px]'} py-[15px] rounded-[10px] ${textSize ? textSize : 'text-[15px] leading-[1.3]'}`,
     badge: `${width ? width : 'w-[190px]'} h-[49px] rounded-[10px] px-[59px] py-[15px] gap-2 ${textSize ? textSize : 'text-[15px] leading-[1.3]'}`,
     arrow: 'w-10 h-10 rounded-full flex items-center justify-center',
-    readMore: `${width ? width : 'w-[287px]'} h-[36px] rounded-[10px] px-[111px] py-[10px] gap-2 ${textSize ? textSize : 'text-[12px] leading-[1.3]'} whitespace-nowrap`,
-    readMoreLg: `${width ? width : 'w-[431px]'} h-[36px] rounded-[10px] px-[183px] py-[10px] gap-2 ${textSize ? textSize : 'text-[12px] leading-[1.3]'} whitespace-nowrap`
+    readMore: `${width ? width : 'w-full sm:w-[287px]'} h-[36px] rounded-[10px] px-6 sm:px-[111px] py-[10px] gap-2 ${textSize ? textSize : 'text-[12px] leading-[1.3]'} whitespace-nowrap`,
+    readMoreLg: `${width ? width : 'w-full sm:w-[431px]'} h-[36px] rounded-[10px] px-6 sm:px-[183px] py-[10px] gap-2 ${textSize ? textSize : 'text-[12px] leading-[1.3]'} whitespace-nowrap`
   };
 
   // Background and border styles depending on variant and custom bgColor prop

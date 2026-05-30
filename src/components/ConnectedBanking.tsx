@@ -34,19 +34,19 @@ function FeatureItem({ text }: { text: string }) {
 
 export default function ConnectedBanking() {
   return (
-    <section id="connected-banking" className="relative py-24 bg-n7-dark overflow-hidden">
-      <div className="max-w-[1400px] mx-auto px-8">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+    <section id="connected-banking" className="relative py-16 sm:py-20 lg:py-24 bg-n7-dark overflow-hidden">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left — KYC Dashboard */}
           <LaptopMockup
             src="/assets/kyc-dashboard.png"
             alt="KYC Dashboard"
-            className="lg:justify-self-start lg:ml-[calc(min(0px,(100vw-1400px)/-2)-6rem)]"
+            className="lg:justify-self-start xl:ml-[calc(min(0px,(100vw-1400px)/-2)-6rem)]"
           />
 
           {/* Right — Feature list */}
           <div className="lg:pl-10 xl:pl-16">
-            <h2 className="font-archivo font-normal text-[27px] leading-[1.3] tracking-normal text-white mb-6 max-w-2xl line-clamp-2">
+            <h2 className="font-archivo font-normal text-[27px] leading-[1.3] tracking-normal text-white mb-6 max-w-2xl">
               Run a more efficient, flexible, and digitally connected corebanking system
             </h2>
             <p className="text-sm font-semibold text-white mb-6">What you will get:</p>

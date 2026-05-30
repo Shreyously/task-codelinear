@@ -8,23 +8,23 @@ export default function Hero() {
       <div className="absolute inset-0 bg-n7-dark" />
 
 
-      <div className="relative max-w-[1400px] mx-auto px-8 pt-40 pb-28 w-full">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="relative max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 pt-32 sm:pt-36 lg:pt-40 pb-16 sm:pb-20 lg:pb-28 w-full">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
           {/* Left content */}
           <div>
-            <h1 className="font-archivo font-medium text-[40px] md:text-[54px] lg:text-[67px] lg:leading-[80.4px] text-[#E9F4F9] tracking-[-0.67px] mb-6 max-w-[608px]">
+            <h1 className="font-archivo font-medium text-[38px] leading-[1.1] sm:text-[46px] md:text-[54px] lg:text-[67px] lg:leading-[80.4px] text-[#E9F4F9] tracking-[0] mb-6 max-w-[608px]">
               The new foundation of modern banking
             </h1>
             <p className="font-sans text-base md:text-lg text-[#E9F4F9]/80 max-w-[450px] mb-10 leading-relaxed">
               We drive innovation and growth, provide seamless customer experience and operational excellence
             </p>
-            <div className="flex flex-wrap gap-[20px]">
+            <div className="flex flex-col sm:flex-row sm:flex-wrap gap-[14px] sm:gap-[20px]">
               {/* Primary Button */}
-              <Button href="#contact" variant="primary" size="lg" textSize="text-[15px]" width="w-[210px]">
+              <Button href="#contact" variant="primary" size="lg" textSize="text-[15px]" width="w-full sm:w-[210px]">
                 request demo
               </Button>
               {/* Secondary Button */}
-              <Button href="#contact" variant="secondary" size="lg" textSize="text-[15px]" width="w-[210px]">
+              <Button href="#contact" variant="secondary" size="lg" textSize="text-[15px]" width="w-full sm:w-[210px]">
                 contact us
               </Button>
             </div>

@@ -16,7 +16,7 @@ export default function PaperlessCTA({ background = 'dark', text = 'CB7', noBack
   const watermarkLayerClass = 'absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-[27px]';
 
   return (
-    <section className={`relative ${sectionBackground} py-20 overflow-hidden`}>
+    <section className={`relative ${sectionBackground} py-12 sm:py-16 lg:py-20 overflow-hidden`}>
       {!noBackground && background === 'light' && (
         <div
           className="pointer-events-none absolute inset-0 z-0 opacity-[0.16] bg-[linear-gradient(100.92deg,#00CFFD_35.49%,#0015CE_82.38%)] [mask-image:radial-gradient(ellipse_95%_130%_at_0%_100%,#000_0%,rgba(0,0,0,0.55)_42%,transparent_78%)]"
@@ -24,9 +24,9 @@ export default function PaperlessCTA({ background = 'dark', text = 'CB7', noBack
         />
       )}
       <div className="relative z-30 mx-auto w-[calc(100%-2rem)] max-w-[1340px]">
-        <div className={`relative isolate min-h-[427px] ${noBackground ? 'py-16' : 'overflow-hidden rounded-[27px] bg-[linear-gradient(99.21deg,#031E2A_-12.22%,#000D12_59.26%)] px-8 py-16 md:px-[65px]'} lg:flex lg:items-center lg:justify-between lg:gap-14`}>
+        <div className={`relative isolate ${noBackground ? 'py-10 sm:py-16' : 'overflow-hidden rounded-[20px] sm:rounded-[27px] bg-[linear-gradient(99.21deg,#031E2A_-12.22%,#000D12_59.26%)] px-4 py-10 sm:px-8 sm:py-14 md:px-[65px] lg:min-h-[427px]'} lg:flex lg:items-center lg:justify-between lg:gap-14`}>
           {!noBackground && (
-            <div className={watermarkLayerClass}>
+            <div className={`${watermarkLayerClass} hidden sm:block`}>
               {/* Soft, highly-blurred backdrop glow blob */}
               <div className="absolute -left-[5%] top-[15%] w-[480px] h-[320px] rounded-full bg-[#00B4FD]/12 blur-[120px] pointer-events-none z-0" />
               <PaperlessCTAWatermarkIcon
@@ -38,8 +38,8 @@ export default function PaperlessCTA({ background = 'dark', text = 'CB7', noBack
           )}
 
           <div className="relative z-10 max-w-[590px]">
-            <h2 className="font-archivo text-[42px] font-normal leading-[1.28] tracking-normal text-[#E9F4F9] md:text-[52px] md:leading-[1.25]">
-              Take the full advantage of<br />going paper-less now.
+            <h2 className="font-archivo text-[34px] font-normal leading-[1.2] tracking-normal text-[#E9F4F9] sm:text-[42px] md:text-[52px] md:leading-[1.25]">
+              Take the full advantage of<br className="hidden sm:block" />going paper-less now.
             </h2>
             <p className="mt-8 max-w-[510px] font-archivo text-base font-normal leading-[1.3] tracking-normal text-[#B8C7CE]">
               {text} helps your financial institution improve the client experience,
@@ -47,11 +47,11 @@ export default function PaperlessCTA({ background = 'dark', text = 'CB7', noBack
             </p>
           </div>
 
-          <div className="relative z-10 mt-12 flex flex-wrap gap-10 lg:mt-0 lg:mr-[39px] lg:flex-nowrap">
-            <Button href="#contact" variant="secondary" size="lg" textSize="text-[15px]" width="w-[208px]">
+          <div className="relative z-10 mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:gap-6 lg:mt-0 lg:mr-[39px] lg:flex-nowrap">
+            <Button href="#contact" variant="secondary" size="lg" textSize="text-[15px]" width="w-full sm:w-[208px]">
               contact us
             </Button>
-            <Button href="#contact" variant="primary" size="lg" textSize="text-[15px]" width="w-[210px]">
+            <Button href="#contact" variant="primary" size="lg" textSize="text-[15px]" width="w-full sm:w-[210px]">
               request demo
             </Button>
           </div>
